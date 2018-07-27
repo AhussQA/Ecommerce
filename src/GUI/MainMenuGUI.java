@@ -43,7 +43,7 @@ public class MainMenuGUI extends GUI {
             public void handle(ActionEvent event) {
                 try{
 //                    primaryStageRef.close();
-                    new CreateUserStage().start(new Stage());
+                    new ItemSearchGUI().start(new Stage());
 
                 }catch (Exception e){
                     e.printStackTrace();

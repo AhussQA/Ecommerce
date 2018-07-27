@@ -16,13 +16,13 @@ public class Connection {
     public java.sql.Connection createConnection() {
         if(databaseConnection == null) {
             try {
-//                Class.forName(JDBC_DRIVER);
+                Class.forName(JDBC_DRIVER);
                 databaseConnection = DriverManager.getConnection(MYSQL_DB,"root","1234");
 
             }
-//            catch (ClassNotFoundException e) {
-//                e.printStackTrace();
-//            }
+            catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
             catch (SQLException e) {
                 e.printStackTrace();
             }

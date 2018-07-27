@@ -1,4 +1,5 @@
 import Database.Connection;
+import Database.DatabaseFunctions;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,9 +13,12 @@ public class MainDatabaseEngine {
 
         try {
             Statement statement = databaseConnection.createStatement();
-            ResultSet rs = statement.executeQuery(sqlQuery);
-        }
-        catch (SQLException e){
+            //statement.executeUpdate(DatabaseFunctions.createUserAccount("Assad","Assad"));
+            ResultSet rs = statement.executeQuery(DatabaseFunctions.listItems());
+
+            while (rs.next())
+                System.out.println("Name: " + rs.getString(1) + " Type: " + rs.getString(2) + " Price: " + rs.getString(3) + " Quantity: " + rs.getString(4));
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
