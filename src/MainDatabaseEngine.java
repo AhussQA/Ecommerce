@@ -18,6 +18,11 @@ public class MainDatabaseEngine {
 
             while (rs.next())
                 System.out.println("Name: " + rs.getString(1) + " Type: " + rs.getString(2) + " Price: " + rs.getString(3) + " Quantity: " + rs.getString(4));
+
+            rs = statement.executeQuery(DatabaseFunctions.listItems("Chocolate Flapjack"));
+            while (rs.next())
+                System.out.println("Name: " + rs.getString(1) + " Type: " + rs.getString(2) + " Price: " + rs.getString(3) + " Quantity: " + rs.getString(4));
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
