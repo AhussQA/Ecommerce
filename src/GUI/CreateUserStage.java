@@ -21,9 +21,7 @@ public class CreateUserStage extends GUI {
     private Label passwordLabel = new Label("Password: ");
     private Label confirmPasswordLabel = new Label("Confirm Password: ");
     private Label postcodeLabel = new Label("Username: ");
-    private Label 
-Label = new Label("Password: ");
-    private Label confirmPasswordLabel = new Label("Confirm Password: ");
+ 
 
     private TextField userInput = new TextField();
     private TextField passwordInput = new TextField();
